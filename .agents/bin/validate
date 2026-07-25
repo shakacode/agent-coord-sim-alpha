@@ -26,9 +26,10 @@ if [ -n "$base_ref" ]; then
   if [ "$changed_count" -gt 0 ]; then
     config_only_invalid="$(printf '%s\n' "$changed" |
       sed '/^$/d' |
-      grep -Ev '^(AGENTS\.md|\.agents/agent-workflow\.yml|\.agents/bin/validate)$' || true)"
+      grep -Ev '^(AGENTS\.md|\.agents/agent-workflow\.yml|\.agents/bin/(README\.md|config-check|validate))$' || true)"
     if [ -z "$config_only_invalid" ]; then
-      exit 0
+      "$root/.agents/bin/config-check" "$base_ref"
+      exit $?
     fi
 
     invalid="$(printf '%s\n' "$changed" |
