@@ -7,3 +7,5 @@ module TaskTwo
     text.downcase
   end
 end
+
+# strict-check probe B
