@@ -7,3 +7,5 @@ module TaskOne
     numbers.sum
   end
 end
+
+# seam-guard exercise: task-only edit for PR #103 follow-up (issue 140)
