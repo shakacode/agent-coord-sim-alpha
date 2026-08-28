@@ -7,3 +7,5 @@ module TaskTwo
     text.downcase
   end
 end
+
+# seam-guard exercise: second task-only edit to trigger synchronize
