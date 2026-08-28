@@ -7,3 +7,5 @@ module TaskOne
     numbers.sum
   end
 end
+
+# clean task-only change
